@@ -3,7 +3,7 @@
 const express = require("express");
 const path = require("path");
 const apiNotes = require("./Routes/apiNotes");
-const html = require("./Routes/html.js");
+
 
 const PORT = 3001;
 const app = express();
@@ -11,19 +11,20 @@ const app = express();
 ///////////// Add Middleware /////////////
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/apiNotes", apiNotes);
-app.use("/html", html);
-
 app.use(express.static("public"));
+app.use("/api", apiNotes);
+// app.use("/html", html);
+
+
 
 //////Route for Homepage index.html///////
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "/public/index.html"))
+  res.sendFile(path.join(__dirname, "./public/index.html"))
 );
 
 ////////Route for Notes.html//////////////
 app.get("/", (req, res) =>
-  res.sendFile(path.join(__dirname, "/public/notes.html"))
+  res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
 app.listen(PORT, () =>
