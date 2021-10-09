@@ -21,7 +21,7 @@ apiNotes.post("/notes", (req, res) => {
   //destructure assignment for the items in req.body
   const { title, text } = req.body;
 
-  if (tittle && text) {
+  if (title && text) {
     //if all req properties are present
     //variable were object will be saved
     const newNote = {

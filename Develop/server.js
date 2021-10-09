@@ -4,7 +4,6 @@ const express = require("express");
 const path = require("path");
 const apiNotes = require("./Routes/apiNotes");
 
-
 const PORT = 3001;
 const app = express();
 
@@ -15,15 +14,13 @@ app.use(express.static("public"));
 app.use("/api", apiNotes);
 // app.use("/html", html);
 
-
-
 //////Route for Homepage index.html///////
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/index.html"))
 );
 
 ////////Route for Notes.html//////////////
-app.get("/", (req, res) =>
+app.get("/notes", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/notes.html"))
 );
 
