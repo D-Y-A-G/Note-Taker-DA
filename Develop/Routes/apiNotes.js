@@ -28,6 +28,7 @@ apiNotes.post("/notes", (req, res) => {
     const newNote = {
       title,
       text,
+      id: uuid(),
     };
 
     //read added notes
