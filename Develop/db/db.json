@@ -2,17 +2,5 @@
   {
     "title": "Test Title",
     "text": "Test text"
-  },
-  {
-    "title": "TESTING NOTE 1",
-    "text": "Need to find out how to retrieve note!"
-  },
-  {
-    "title": "Testing note 2",
-    "text": "Need to add delete functionality"
-  },
-  {
-    "title": "Test Note 3",
-    "text": "added a note "
   }
 ]
