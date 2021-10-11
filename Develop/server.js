@@ -4,6 +4,7 @@ const express = require("express");
 const path = require("path");
 const apiNotes = require("./Routes/apiNotes");
 const noteData = require("./db/db.json");
+const { fstat } = require("fs");
 
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -14,6 +15,18 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use("/api", apiNotes);
 // app.use("/html", html);
+
+///// get saved note //////
+app.get("api/notes", (req, res) => {
+  fs.readFile(path.join(__dirname, "./db/db.json"), (err, data) => {
+    if (err) {
+      console.error(err);
+    } else {
+      const showNote = JSON.parse(data);
+      res.json(showNote);
+    }
+  });
+});
 
 //////Route for Homepage index.html///////
 app.get("/", (req, res) =>

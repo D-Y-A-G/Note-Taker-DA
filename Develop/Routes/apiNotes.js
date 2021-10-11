@@ -14,6 +14,7 @@ apiNotes.get("/notes", (req, res) => {
   });
 });
 
+
 //////////////Post request to add note //////////////
 
 apiNotes.post("/notes", (req, res) => {
