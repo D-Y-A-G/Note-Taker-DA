@@ -65,4 +65,31 @@ apiNotes.post("/notes", (req, res) => {
   }
 });
 
+/////////////// delete note /////////////// not working
+
+apiNotes.delete("/notes/:id", (req, res) => {
+  fs.readFile("./db/db.json"),
+    (err, data) => {
+      if (err) {
+        console.error(err);
+      } else {
+        const notes = JSON.parse(data);
+        const noteId = req.params.id;
+        for (let i = 0; i < notes.length; i++) {
+          const deleteNote = notes[i];
+          if (deleteNote.id === noteId) {
+            notes.splice(i, 1);
+          }
+        }
+
+        fs.writeFile("./db/db.json", JSON.stringify(allNotes), (err, data) => {
+          if (err) {
+            console.error(err);
+            res.json(allNotes);
+          }
+        });
+      }
+    };
+});
+
 module.exports = apiNotes;

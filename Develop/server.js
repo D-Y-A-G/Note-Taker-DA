@@ -28,28 +28,6 @@ app.get("api/notes", (req, res) => {
   });
 });
 
-/////////////// delete note /////////////// not working
-
-// app.delete("api/notes", (req, res) => {
-//   const noteId = req.params.id;
-//   fs.readFile(path.join(__dirname, "./db/db.json"), (err, data) => {
-//     if (err) {
-//       console.error(err);
-//       const notes = JSON.parse(data);
-//       const allNotes = notes.filter((item) => {
-//         return item.id !== noteId;
-//       });
-//       fs.writeFile("./db/db.json", JSON.stringify(allNotes), (err, data) => {
-//         console.log("Note deleted!");
-//         if (err) {
-//           console.error(err);
-//           res.json(allNotes);
-//         }
-//       });
-//     }
-//   });
-// });
-
 //////Route for Homepage index.html///////
 app.get("/", (req, res) =>
   res.sendFile(path.join(__dirname, "./public/index.html"))

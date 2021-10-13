@@ -95,7 +95,7 @@ To contribute you can do a pull request and add more functionality or elements t
 ## **🚧Tests**
 
 ```md
-Write tests for your application and provide examples on how to run them here.
+
 ```
 
 ---
