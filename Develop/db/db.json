@@ -3,5 +3,10 @@
     "title": "TEST TITLE",
     "text": "Test text",
     "id": 68338
+  },
+  {
+    "title": "TEST 2",
+    "text": "adding second note",
+    "id": 82221
   }
 ]
