@@ -96,6 +96,10 @@ To contribute you can do a pull request and add more functionality or elements t
 
 [Test App in Heroku](https://note-taker-da.herokuapp.com/)
 
+App Images:
+![image](https://user-images.githubusercontent.com/84104912/137244839-b1b8b0d0-cdc4-4ec8-aa92-8289f1917b19.png)
+![image](https://user-images.githubusercontent.com/84104912/137244897-6e6f5819-d387-4176-8f64-f527ba22442f.png)
+
 ---
 
 ## **💬Questions**
