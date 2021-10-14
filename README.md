@@ -42,7 +42,7 @@ Download app files from repo run npm i, and then start app by typing npm start. 
 ## **💻Usage**
 
 ```md
-Run application by typing npm start or node server.js, once port showing open on browser and start using app.
+Run application by typing "node server.js" once port showing, open on browser and start using app.
 ```
 
 ---
@@ -94,9 +94,7 @@ To contribute you can do a pull request and add more functionality or elements t
 
 ## **🚧Tests**
 
-```md
-
-```
+[Test App in Heroku](https://note-taker-da.herokuapp.com/)
 
 ---
 
